@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+						http://www.springframework.org/schema/beans     
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx.xsd
+                        http://www.springframework.org/schema/aop
+                        http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/jdbc 
+                        http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+	<!-- MVC Annotation相關2個Bean的註冊 -->
+	<mvc:annotation-driven />
+
+	<!-- Spring IOC和DI相關4個Bean的註冊，自動啟用Annotation功能，若有下列指定啟用語句，可忽略此句 -->
+	<context:annotation-config />
+
+	<!-- 指定需要掃視並啟用的Annotation package的位置 -->
+	<context:component-scan base-package="main.java.controller" />
+
+	<!-- 設定取得DB properties -->
+	<context:property-placeholder
+		location="classpath:resources/DBSetting.properties" order="1"
+		ignore-unresolvable="true" file-encoding="UTF-8" />
+
+	<!-- Run H2 Database pre SQL -->
+	<jdbc:initialize-database data-source="h2_dataSource" ignore-failures="ALL">
+		<jdbc:script location="classpath:resources/schema.sql" />
+		<jdbc:script location="classpath:resources/tableData.sql" />
+	</jdbc:initialize-database>
+
+	<!-- Run H2 Database -->
+	<bean id="h2_dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" /> <!-- 使用Spring property placeholder ${...} 來注入properties檔的參數 -->
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<!-- <property name="minPoolSize" value="${connection.minPoolSize}" /> 
+			<property name="maxPoolSize" value="${connection.maxPoolSize}" /> <property 
+			name="maxIdleTime" value="${connection.maxIdleTime}" /> -->
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="h2_dataSource" />
+		<property name="packagesToScan" value="main.java.entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.H2Dialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<tx:annotation-driven />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 配置SpringMVC的網頁路徑 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 配置網頁使用img js css的包的位置 -->
+	<mvc:resources mapping="/rscIMG/**" location="/resources/img/" />
+	<mvc:resources mapping="/rscJS/**" location="/resources/js/" />
+	<mvc:resources mapping="/rscCSS/**" location="/resources/css/" />
+
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>springMVC_Project</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 設定springframework的起始設定文件 -->
+  <context-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/applicationContext.xml</param-value>
+  </context-param>
+  <!-- 設置Listener -->
+  <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+    
+  <!-- spring Listener Dispatcher -->
+  <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+  <!-- H2 Console -->
+  <servlet>
+  	<servlet-name>H2Console</servlet-name>
+  	<servlet-class>org.h2.server.web.WebServlet</servlet-class>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  
+  <!-- H2 Mapping, * /console can't find anything -->
+  <servlet-mapping>
+  	<servlet-name>H2Console</servlet-name>
+  	<url-pattern>/console/*</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
