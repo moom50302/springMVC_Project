@@ -11,9 +11,11 @@
 	<p>Dear Our Customer. Have a Great Time Yourself Here.</p>
 	<div>
 		What kind of things do you want to do ?
-		<a href="insert/normal">Create A New Account</a>
-		<a href="edit/normal">Edit My Account</a>
-		<a href="delete/normal">Delete My Account</a>
+		<ul>
+			<li><a href="insert/normal">Create A New Account</a></li>
+			<li><a href="edit/normal">Edit My Account</a></li>
+			<li><a href="delete/normal">Delete My Account</a></li>
+		</ul>
 	</div>
 </body>
 </html>

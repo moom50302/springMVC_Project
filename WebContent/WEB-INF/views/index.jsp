@@ -11,9 +11,13 @@
 	
 	<p> Welcome to IF Studio SpringMVC Practice Page.</p>
 	<div>
-		Here You Have To Choose Which Type of Customer You Are ?
-		<a href="loginPage/normal">Normal People</a>
-		<a href="loginPage/enterprise">Enterprise</a>
+		Please Login Your Own Account And Get Your VIP Service.
+		<form action="loginCheck" method="POST">
+			<input type="text" name="account" placeholder="Account"/>
+			<input type="password" name="password" placeholder="Password"/>
+			<input type="submit" value="Send"/>
+		</form>
 	</div>
+	${message}
 </body>
 </html>
