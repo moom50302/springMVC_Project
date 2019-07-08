@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import main.java.entity.v_ticket;
-import main.java.service.vService;
+import main.java.service.view.ticket.vTicketService;
 
 @CrossOrigin(origins = "http://localhost:13323")
 
@@ -21,7 +21,7 @@ public class vServiceController {
 	
 	@Autowired
 	@Qualifier("vTicketService")
-	private vService vService;
+	private vTicketService vService;
 	
 	@RequestMapping(value="/vTicket/{id}",produces = {"application/json;charset=UTF-8"},method=RequestMethod.GET)
     public List<v_ticket> listClassItem(@PathVariable("id") int id){

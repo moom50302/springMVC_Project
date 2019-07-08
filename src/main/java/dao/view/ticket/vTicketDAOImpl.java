@@ -1,4 +1,4 @@
-package main.java.dao;
+package main.java.dao.view.ticket;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import main.java.entity.v_ticket;
 
 @Repository("vTicketDAO")
-public class vTicketDAOImpl implements vDAO{
+public class vTicketDAOImpl implements vTicketDAO{
 	
 	@Autowired
 	private SessionFactory sessionFactory;

@@ -1,54 +1,60 @@
 -- Member
-INSERT INTO MEMBER VALUES(1, 'test1', 'test1', '簡思妤', 1, '1994-11-02', '4871e5@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(2, 'test2', 'test2', '金承恩', 1, '2002-04-05', '6487kg@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(3, 'test3', 'test3', '歐宥廷', 1, '2003-11-06', 'pqqw0hq5gc5@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(4, 'test4', 'test4', '洪家華', 2, '1982-10-15', '36r56pf@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(5, 'test5', 'test5', '涂宜蓁', 2, '2003-04-25', 'id81z65@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(6, 'test6', 'test6', '歐品睿', 1, '1988-10-28', 'sdt3na4748j1@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(7, 'test7', 'test7', '陳宸睿', 2, '2000-12-16', 'yuq0avse61@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(8, 'test8', 'test8', '葉芯語', 2, '1997-01-05', 'pye7l4@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(9, 'test9', 'test9', '莊品睿', 2, '1990-10-25', 'l5y02g8bdia1@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(10, 'test10', 'test10', '周冠宇', 2, '2018-09-30', 'k184q6tl7l@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(11, 'test11', 'test11', '蔡冠宇', 2, '1999-07-23', 'z1lkj0d@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(12, 'test12', 'test12', '曾柏翰', 2, '1989-08-01', 'cmx257nc47yi@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(13, 'test13', 'test13', '黎彥廷', 1, '1986-10-02', 'ivwuk0f0@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(14, 'test14', 'test14', '湯宥翔', 1, '1989-11-01', 'gwry6c6p4zt@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(15, 'test15', 'test15', '倪子晴', 1, '1982-04-30', 'g4yi81@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(16, 'test16', 'test16', '童沛恩', 1, '1986-01-24', 'f8jo7rta@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(17, 'test17', 'test17', '施品妤', 2, '1990-08-18', '6y0d4ov5jg@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(18, 'test18', 'test18', '蘇恩綺', 2, '1995-05-31', 't561py7p@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(19, 'test19', 'test19', '卓皓', 2, '2007-04-23', '4244ueqq@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(20, 'test20', 'test20', '丁宇', 1, '1980-01-27', '185k4jkuf3@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(21, 'test21', 'test21', '戴家豪', 2, '2012-12-09', '40061s6@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(22, 'test22', 'test22', '翁睿恩', 1, '2002-09-02', 'u5sx1c42bhj@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(23, 'test23', 'test23', '龔羽彤', 2, '2016-12-06', 'lgtsl1@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(24, 'test24', 'test24', '馮冠宇', 2, '2003-12-12', 'vvm7t6e2nda4@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(25, 'test25', 'test25', '簡冠廷', 2, '2017-09-01', 'qsa1wsjr13@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(26, 'test26', 'test26', '高子涵', 2, '2015-09-28', '088pgfowm3n@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(27, 'test27', 'test27', '薛柏宇', 1, '1996-07-15', '5n680myctf03@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(28, 'test28', 'test28', '張冠廷', 1, '2016-07-24', '0bs2523op5@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(29, 'test29', 'test29', '韓宇', 2, '2011-03-30', '32t0d2q@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(30, 'test30', 'test30', '涂家豪', 1, '1991-11-07', '6h6v472xxf@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(31, 'test31', 'test31', '鄒品睿', 2, '2018-03-19', '8131r1er@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(32, 'test32', 'test32', '宋承恩', 1, '2016-07-28', '6b0t3j0@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(33, 'test33', 'test33', '莊宥廷', 1, '1993-12-13', 'obu365k@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(34, 'test34', 'test34', '童家華', 2, '2013-12-01', 'rhvs4iy5@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(35, 'test35', 'test35', '田睿恩', 2, '1993-05-30', '46zfr53j6z38@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(36, 'test36', 'test36', '歐彤', 2, '1981-01-12', '4j3zcg5@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(37, 'test37', 'test37', '蔡宇翔', 2, '2010-07-09', '01xj570@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(38, 'test38', 'test38', '田詠晴', 2, '2018-02-19', 'l4eqoutv8@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(39, 'test39', 'test39', '曾凱泓', 1, '1989-12-18', 'd5210767qe@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(40, 'test40', 'test40', '袁柏宇', 1, '2016-12-11', 'q201782@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(41, 'test41', 'test41', '吳羽彤', 1, '2013-06-17', '10i8rafa643@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(42, 'test42', 'test42', '游冠廷', 1, '1991-10-30', 's5rn705vc@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(43, 'test43', 'test43', '白彤', 1, '1980-06-18', 'b322443q@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(44, 'test44', 'test44', '徐宥廷', 1, '1999-07-07', '7si44fc5b8w@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(45, 'test45', 'test45', '薛子涵', 1, '2009-11-08', 'h2cx8q@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(46, 'test46', 'test46', '侯宥翔', 2, '1988-04-28', '31qjg3q6p0@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(47, 'test47', 'test47', '高宥廷', 1, '2009-10-01', 'k0u778z43408@gmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(48, 'test48', 'test48', '董宥廷', 2, '1989-03-17', '8lhhz85e73@hotmail.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(49, 'test49', 'test49', '彭睿恩', 1, '1986-10-18', 'q34e27y0x@yahoo.com', CURRENT_DATE, null);
-INSERT INTO MEMBER VALUES(50, 'test50', 'test50', '簡宇翔', 1, '1993-08-08', '3p75txj@gmail.com', CURRENT_DATE, null);
+INSERT INTO MEMBER (CID,ACCOUNT,PASSWORD,NAME,SEX,BIRTHDAY,EMAIL,CREATE_TIME,UPDATE_TIME)
+VALUES
+(1, 'test1', 'test1', '簡思妤', 1, '1994-11-02', '4871e5@hotmail.com', CURRENT_DATE, null)
+,(2, 'test2', 'test2', '金承恩', 1, '2002-04-05', '6487kg@yahoo.com', CURRENT_DATE, null)
+,(3, 'test3', 'test3', '歐宥廷', 1, '2003-11-06', 'pqqw0hq5gc5@hotmail.com', CURRENT_DATE, null)
+,(4, 'test4', 'test4', '洪家華', 2, '1982-10-15', '36r56pf@gmail.com', CURRENT_DATE, null)
+,(5, 'test5', 'test5', '涂宜蓁', 2, '2003-04-25', 'id81z65@hotmail.com', CURRENT_DATE, null)
+,(6, 'test6', 'test6', '歐品睿', 1, '1988-10-28', 'sdt3na4748j1@hotmail.com', CURRENT_DATE, null)
+,(7, 'test7', 'test7', '陳宸睿', 2, '2000-12-16', 'yuq0avse61@gmail.com', CURRENT_DATE, null)
+,(8, 'test8', 'test8', '葉芯語', 2, '1997-01-05', 'pye7l4@hotmail.com', CURRENT_DATE, null)
+,(9, 'test9', 'test9', '莊品睿', 2, '1990-10-25', 'l5y02g8bdia1@gmail.com', CURRENT_DATE, null)
+,(10, 'test10', 'test10', '周冠宇', 2, '2018-09-30', 'k184q6tl7l@hotmail.com', CURRENT_DATE, null)
+,(11, 'test11', 'test11', '蔡冠宇', 2, '1999-07-23', 'z1lkj0d@yahoo.com', CURRENT_DATE, null)
+,(12, 'test12', 'test12', '曾柏翰', 2, '1989-08-01', 'cmx257nc47yi@yahoo.com', CURRENT_DATE, null)
+,(13, 'test13', 'test13', '黎彥廷', 1, '1986-10-02', 'ivwuk0f0@yahoo.com', CURRENT_DATE, null)
+,(14, 'test14', 'test14', '湯宥翔', 1, '1989-11-01', 'gwry6c6p4zt@hotmail.com', CURRENT_DATE, null)
+,(15, 'test15', 'test15', '倪子晴', 1, '1982-04-30', 'g4yi81@hotmail.com', CURRENT_DATE, null)
+,(16, 'test16', 'test16', '童沛恩', 1, '1986-01-24', 'f8jo7rta@gmail.com', CURRENT_DATE, null)
+,(17, 'test17', 'test17', '施品妤', 2, '1990-08-18', '6y0d4ov5jg@yahoo.com', CURRENT_DATE, null)
+,(18, 'test18', 'test18', '蘇恩綺', 2, '1995-05-31', 't561py7p@hotmail.com', CURRENT_DATE, null)
+,(19, 'test19', 'test19', '卓皓', 2, '2007-04-23', '4244ueqq@hotmail.com', CURRENT_DATE, null)
+,(20, 'test20', 'test20', '丁宇', 1, '1980-01-27', '185k4jkuf3@hotmail.com', CURRENT_DATE, null)
+,(21, 'test21', 'test21', '戴家豪', 2, '2012-12-09', '40061s6@yahoo.com', CURRENT_DATE, null)
+,(22, 'test22', 'test22', '翁睿恩', 1, '2002-09-02', 'u5sx1c42bhj@gmail.com', CURRENT_DATE, null)
+,(23, 'test23', 'test23', '龔羽彤', 2, '2016-12-06', 'lgtsl1@yahoo.com', CURRENT_DATE, null)
+,(24, 'test24', 'test24', '馮冠宇', 2, '2003-12-12', 'vvm7t6e2nda4@gmail.com', CURRENT_DATE, null)
+,(25, 'test25', 'test25', '簡冠廷', 2, '2017-09-01', 'qsa1wsjr13@gmail.com', CURRENT_DATE, null)
+,(26, 'test26', 'test26', '高子涵', 2, '2015-09-28', '088pgfowm3n@gmail.com', CURRENT_DATE, null)
+,(27, 'test27', 'test27', '薛柏宇', 1, '1996-07-15', '5n680myctf03@hotmail.com', CURRENT_DATE, null)
+,(28, 'test28', 'test28', '張冠廷', 1, '2016-07-24', '0bs2523op5@hotmail.com', CURRENT_DATE, null)
+,(29, 'test29', 'test29', '韓宇', 2, '2011-03-30', '32t0d2q@hotmail.com', CURRENT_DATE, null)
+,(30, 'test30', 'test30', '涂家豪', 1, '1991-11-07', '6h6v472xxf@hotmail.com', CURRENT_DATE, null)
+,(31, 'test31', 'test31', '鄒品睿', 2, '2018-03-19', '8131r1er@hotmail.com', CURRENT_DATE, null)
+,(32, 'test32', 'test32', '宋承恩', 1, '2016-07-28', '6b0t3j0@hotmail.com', CURRENT_DATE, null)
+,(33, 'test33', 'test33', '莊宥廷', 1, '1993-12-13', 'obu365k@hotmail.com', CURRENT_DATE, null)
+,(34, 'test34', 'test34', '童家華', 2, '2013-12-01', 'rhvs4iy5@hotmail.com', CURRENT_DATE, null)
+,(35, 'test35', 'test35', '田睿恩', 2, '1993-05-30', '46zfr53j6z38@hotmail.com', CURRENT_DATE, null)
+,(36, 'test36', 'test36', '歐彤', 2, '1981-01-12', '4j3zcg5@yahoo.com', CURRENT_DATE, null)
+,(37, 'test37', 'test37', '蔡宇翔', 2, '2010-07-09', '01xj570@gmail.com', CURRENT_DATE, null)
+,(38, 'test38', 'test38', '田詠晴', 2, '2018-02-19', 'l4eqoutv8@yahoo.com', CURRENT_DATE, null)
+,(39, 'test39', 'test39', '曾凱泓', 1, '1989-12-18', 'd5210767qe@yahoo.com', CURRENT_DATE, null)
+,(40, 'test40', 'test40', '袁柏宇', 1, '2016-12-11', 'q201782@yahoo.com', CURRENT_DATE, null)
+,(41, 'test41', 'test41', '吳羽彤', 1, '2013-06-17', '10i8rafa643@gmail.com', CURRENT_DATE, null)
+,(42, 'test42', 'test42', '游冠廷', 1, '1991-10-30', 's5rn705vc@yahoo.com', CURRENT_DATE, null)
+,(43, 'test43', 'test43', '白彤', 1, '1980-06-18', 'b322443q@gmail.com', CURRENT_DATE, null)
+,(44, 'test44', 'test44', '徐宥廷', 1, '1999-07-07', '7si44fc5b8w@gmail.com', CURRENT_DATE, null)
+,(45, 'test45', 'test45', '薛子涵', 1, '2009-11-08', 'h2cx8q@yahoo.com', CURRENT_DATE, null);
+
+-- Enterprise Customer
+INSERT INTO MEMBER VALUES
+(46, 'test46', 'test46', '侯宥翔', 2, '1988-04-28', '31qjg3q6p0@hotmail.com','enterprise', CURRENT_DATE, null)
+,(47, 'test47', 'test47', '高宥廷', 1, '2009-10-01', 'k0u778z43408@gmail.com','enterprise', CURRENT_DATE, null)
+,(48, 'test48', 'test48', '董宥廷', 2, '1989-03-17', '8lhhz85e73@hotmail.com','enterprise', CURRENT_DATE, null)
+,(49, 'test49', 'test49', '彭睿恩', 1, '1986-10-18', 'q34e27y0x@yahoo.com','enterprise', CURRENT_DATE, null)
+,(50, 'test50', 'test50', '簡宇翔', 1, '1993-08-08', '3p75txj@gmail.com','enterprise', CURRENT_DATE, null);
+
 -- Product:
 INSERT INTO PRODUCT VALUES(1, 168, '蒸羊羔',NULL);
 INSERT INTO PRODUCT VALUES(2, 5054, '蒸熊掌',NULL);

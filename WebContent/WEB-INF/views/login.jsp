@@ -7,17 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Here is INDEX Page.</h1>
+	<h1>Here is Login Page.</h1>
 	
 	<p> Welcome to IF Studio SpringMVC Practice Project.</p>
 	<div>
-		<p>Hi ${customerData.name} (${customerData.account}) Welcome Back.</p>
-		<p>Let's See What You Can Do ?</p>
-		<ul>
-			<li><a href="checkTicket">Check My Own Ticket</a></li>
-			<li><a href="updateCustomer">Update My Own Data</a></li>
-			<li><a href="vipService">VIP Service (Only For Enterprise Customer)</a></li>
-		</ul>
+		Please Login Your Own Account And Get Your Own Service.
+		<form action="loginCheck" method="POST">
+			<input type="text" name="account" placeholder="Account"/>
+			<input type="password" name="password" placeholder="Password"/>
+			<input type="submit" value="Send"/>
+		</form>
 	</div>
+	${message}
 </body>
 </html>
