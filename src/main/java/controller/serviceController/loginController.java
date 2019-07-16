@@ -25,8 +25,6 @@ public class loginController {
 			@RequestParam("password") String password,
 			ModelAndView modelAndView){
 		
-		System.out.println(account+"-"+password);
-		
 		String result = vCustomerService.findByAP(account, password);
 		
 		if(result.contains("ERROR")){

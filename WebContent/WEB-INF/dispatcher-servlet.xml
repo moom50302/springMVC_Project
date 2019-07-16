@@ -15,8 +15,8 @@
 						http://www.springframework.org/schema/context/spring-context-3.0.xsd
                         http://www.springframework.org/schema/tx
                         http://www.springframework.org/schema/tx/spring-tx.xsd
-                        http://www.springframework.org/schema/aop
-                        http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/aop 
+       					http://www.springframework.org/schema/aop/spring-aop.xsd
                         http://www.springframework.org/schema/jdbc 
                         http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
                         http://www.springframework.org/schema/security 
@@ -28,13 +28,15 @@
 	<!-- Spring IOC和DI相關4個Bean的註冊，自動啟用Annotation功能，若有下列指定啟用語句，可忽略此句 -->
 	<context:annotation-config />
 	
-	<!-- 指定需要掃視並啟用的Annotation package的位置 -->
-	
-	
 	<context:component-scan base-package="main.java.controller" />
 	<context:component-scan base-package="main.java.dao" />
 	<context:component-scan base-package="main.java.service" />
 	<context:component-scan base-package="main.java.entity" />
+	<context:component-scan base-package="main.java.aop" />
+	
+	<!-- AOP的設定與建立相關Bean -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	<bean id="logAspect" class="main.java.aop.LogAspect"/>
 	
 	<!-- Spring Security 
 	<security:http auto-config='true'>
@@ -54,17 +56,16 @@
 	<mvc:resources mapping="/rscJS/**" location="/resources/js/" />
 	<mvc:resources mapping="/rscCSS/**" location="/resources/css/" />
 
-
 	<!-- 設定取得DB properties -->
 	<context:property-placeholder
-		location="classpath:resources/DBSetting.properties" order="1"
+		location="classpath:main/resources/DBSetting.properties" order="1"
 		ignore-unresolvable="true" file-encoding="UTF-8" />
 
 	<!-- Run H2 Database pre SQL -->
 	<jdbc:initialize-database data-source="h2_dataSource" ignore-failures="ALL">
-		<jdbc:script location="classpath:resources/schema.sql" />
-		<jdbc:script location="classpath:resources/tableData.sql" />
-		<jdbc:script location="classpath:resources/sqlView.sql" />
+		<jdbc:script location="classpath:main/resources/schema.sql" />
+		<jdbc:script location="classpath:main/resources/tableData.sql" />
+		<jdbc:script location="classpath:main/resources/sqlView.sql" />
 	</jdbc:initialize-database>
 
 	<!-- Run H2 Database -->
@@ -74,9 +75,6 @@
 		<property name="url" value="${jdbc.url}" /> <!-- 使用Spring property placeholder ${...} 來注入properties檔的參數 -->
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
-		<!-- <property name="minPoolSize" value="${connection.minPoolSize}" /> 
-			<property name="maxPoolSize" value="${connection.maxPoolSize}" /> <property 
-			name="maxIdleTime" value="${connection.maxIdleTime}" /> -->
 	</bean>
 
 	<bean id="sessionFactory"
