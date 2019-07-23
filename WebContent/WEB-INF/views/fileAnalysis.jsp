@@ -11,7 +11,7 @@
 <body>
 	<h2>Try To Use Our New Service!</h2>
 	<h3>FileAnalysis</h3>
-	<input type="file" id="uploadFile" onchange="handleFiles(this.files)" />
+	<input type="file" id="uploadFile" />
 
 	<hr/>
 	<h3>File Content</h3>
@@ -21,11 +21,12 @@
 	<script>
 		const inputElement = document.getElementById("uploadFile");
 		inputElement.addEventListener("change", handleFiles,null);
-		function handleFiles(files) {
+		function handleFiles(event) {
+	     const files = event.target.files;
 			const fileList = files; 
 			const fileCount = files.length;
 			const file = files[0];
-			const fileName = file.name;
+			const fileName = files.name;
 			$('#fileSetting').html("<p>File Name:"+fileName+"</p><p>Upload File Number:"+fileCount+"</p>");
 			
 			const reader = new FileReader()
