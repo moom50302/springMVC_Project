@@ -11,14 +11,12 @@ import javax.persistence.Table;
 @Table(name="V_CUSTOMER")
 public class v_customer implements Serializable{
 
-	
 	@Override
 	public String toString() {
 		return "v_customer [cid=" + cid + ", account=" + account + ", name=" + name + ", sex=" + sex + ", birthday="
-				+ birthday + ", email=" + email + ", create_time=" + create_time + ", update_time=" + update_time + "]";
+				+ birthday + ", email=" + email + ", create_time=" + create_time + ", update_time=" + update_time
+				+ ", user_role=" + user_role + "]";
 	}
-
-
 
 	private  static  final  long serialVersionUID = 1L ;
 	
@@ -31,6 +29,7 @@ public class v_customer implements Serializable{
 	private String email;
 	private String create_time;
 	private String update_time;
+	private String user_role;
 	
 	
 
@@ -128,9 +127,23 @@ public class v_customer implements Serializable{
 		this.update_time = update_time;
 	}
 
+	
+
+
+
+	public String getUser_role() {
+		return user_role;
+	}
+
+
+
+	public void setUser_role(String user_role) {
+		this.user_role = user_role;
+	}
 
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
 }

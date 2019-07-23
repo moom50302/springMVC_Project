@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,6 +18,11 @@
 			<li><a href="updateCustomer">Update My Own Data</a></li>
 			<li><a href="vipService">VIP Service (Only For Enterprise Customer)</a></li>
 		</ul>
+	</div>
+	
+	<div>
+		<h2>Try Our New Service!</h2>
+		<a href="fileAnalysis"><h3>File For Analysis</h3></a>
 	</div>
 </body>
 </html>

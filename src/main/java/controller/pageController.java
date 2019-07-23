@@ -1,5 +1,6 @@
 package main.java.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,6 +42,12 @@ public class pageController {
 	@RequestMapping("/vipService")
 	public ModelAndView con5(ModelAndView modelAndView){
 		modelAndView.setViewName("Enterprise");
+		return modelAndView;
+	}
+	
+	@RequestMapping("/fileAnalysis")
+	public ModelAndView con6(ModelAndView modelAndView){
+		modelAndView.setViewName("fileAnalysis");
 		return modelAndView;
 	}
 }
