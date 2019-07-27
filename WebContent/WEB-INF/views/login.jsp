@@ -13,8 +13,8 @@
 	<div>
 		Please Login Your Own Account And Get Your Own Service.
 		<form action="loginCheck" method="POST">
-			<input type="text" name="account" placeholder="Account"/>
-			<input type="password" name="password" placeholder="Password"/>
+			<input type="text" name="account" placeholder="Account" value="test1"/>
+			<input type="password" name="password" placeholder="Password" value="test1"/>
 			<input type="submit" value="Send"/>
 		</form>
 	</div>
