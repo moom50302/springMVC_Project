@@ -1,6 +1,7 @@
 package main.java.controller;
 
-import org.springframework.security.access.prepost.PreAuthorize;
+import javax.websocket.server.PathParam;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,4 +51,25 @@ public class pageController {
 		modelAndView.setViewName("fileAnalysis");
 		return modelAndView;
 	}
+	
+	@RequestMapping("/checkContent/{fileName}")
+	public ModelAndView con7(ModelAndView modelAndView,@PathVariable("fileName") String fileName) {
+		modelAndView.addObject("fileName",fileName);
+		modelAndView.setViewName("checkContent");
+		return modelAndView;
+	}
+	
+	@RequestMapping("/uploadFile")
+	public ModelAndView con8(ModelAndView modelAndView) {
+		modelAndView.setViewName("fileUpload");
+		return modelAndView;
+	}
+	
+	/* test for multiple page transfer
+	@RequestMapping("/{pageName}")
+	public ModelAndView testCon(ModelAndView modelAndView,@PathParam("pageName") String pageName) {
+		modelAndView.setViewName(pageName);
+		return modelAndView;
+	}
+	*/
 }
