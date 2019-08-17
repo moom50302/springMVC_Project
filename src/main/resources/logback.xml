@@ -12,7 +12,7 @@
 
 
 	<!-- for output in a log file -->
-	<property name="DEV_HOME" value="E:/eclipse/LOG" />
+	<property name="DEV_HOME" value="D:\EclipseProject\LOG" />
 
 	<appender name="FILE-AUDIT"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">

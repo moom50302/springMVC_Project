@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import au.com.bytecode.opencsv.CSVReader;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 public class fileProcessController {
@@ -30,6 +31,7 @@ public class fileProcessController {
 	ServletContext context;
 	
 	@RequestMapping(value="/uploadFile",method=RequestMethod.POST)
+	@ApiOperation(value="Do Upload File",notes="User Can Upload Content File as CSV To Server Then Analysis.")
 	public ModelAndView set(@RequestParam("uploadFile") MultipartFile file,ModelAndView modelAndView,HttpServletRequest request) {
 		
 		modelAndView.setViewName("fileUpload");

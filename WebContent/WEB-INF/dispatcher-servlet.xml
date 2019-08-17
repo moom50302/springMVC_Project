@@ -37,12 +37,16 @@
 	<context:component-scan base-package="main.java.service" />
 	<context:component-scan base-package="main.java.entity" />
 	<context:component-scan base-package="main.java.aop" />
+	<context:component-scan base-package="main.java.config" />
 	
 	<!-- AOP的設定與建立相關Bean -->
 	<aop:aspectj-autoproxy proxy-target-class="true"/>
 	<beans:bean id="logAspect" class="main.java.aop.LogAspect"/>
 	
-	
+	<!-- Swagger 相關設定 -->
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
+    <beans:bean class="main.java.config.SwaggerConfig"/>
 	
 	<!-- 設置 Spring-Security 的管轄路徑與要求 
 	<security:http entry-point-ref="vipSecurityEntryPoint">
